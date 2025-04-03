@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <h1>Peluqueria nombre</h1>
+    </header>
+    <nav>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" onclick="toggleSidebar()">✖ Cerrar</a>
+            <a href="main.html">Inicio</a>
+            <a href="about.html">Sobre nosotros</a>
+
+            <a href="javascript:void(0)" onclick="toggleSubmenu()">Compras ▼</a>
+            <div id="submenuVentas" class="submenu">
+                <a href="comprar.html">Comprar</a> <!--Añadir que opciones a compra hay-->
+                <a href="consultar.html">Reservar</a> <!--Aparecer las reservas que tiene el usuario y opcion a reservar otra-->
+                <a href="anular.html">Anular</a><!--Anular una de las reservas que tiene el usuario-->
+            </div>
+
+            <a href="services.html">Servicios</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </nav>
+    <!--<div class="contenedor" id="contenedor">
+        <div id="box1">
+            <p>La barbería en Pamplona está otra vez de moda aunque para mí es mucho más que un trabajo o un negocio, es mi vida, mi pasión, un sentimiento, un arte, que como tal o se tiene o no se tiene. Y eso se refleja en el trabajo diario, que busca siempre la perfección y la satisfacción del cliente. Mi nombre es Javier Ugarte, aunque me conocen en el mundo de la peluquería como Javi “Tximak”. Desde niño quise ser peluquero: siempre me recuerdo imaginándome como tal, por eso me trasladé a Pamplona para estudiar peluquería en la Academia y el Instituto, dedicándome especialmente a la peluquería masculina.
+                Esa decisión, fue el germen de Tximak Barbershop, que hoy es la barbería en Pamplona de referencia, especialmente entre gente joven, los deportistas navarros (desde hace un tiempo son asiduos clientes, por eso de un tiempo a esta parte, se la reconoce también como “la peluquería de Osasuna”, porque no es difícil ver en ella como clientes habituales, a muchos jugadores rojillos…).</p>
+        </div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>-->
+    <div class="container">
+        <!-- Fila 1 -->
+        <div class="box" id="caja1"></div>
+        <div class="box" id="caja2"><p>La barbería en Pamplona está otra vez de moda aunque para mí es mucho más que un trabajo o un negocio, es mi vida, mi pasión, un sentimiento, un arte, que como tal o se tiene o no se tiene. Y eso se refleja en el trabajo diario, que busca siempre la perfección y la satisfacción del cliente. Mi nombre es Javier Ugarte, aunque me conocen en el mundo de la peluquería como Javi “Tximak”. </p></div>
+        <!-- Fila 2 FOTOS-->
+        <div class="box" id="caja3"></div>
+        <div class="box" id="caja4"></div>
+        <div class="box" id="caja5"></div>
+        <!-- Fila 3 -->
+        <div class="box" id="caja6">3.1</div>
+        <div class="box" id="caja7">3.2</div>
+        <div class="box" id="caja8">3.3</div>
+        <!-- Fila 4 -->
+        <div class="box" id="caja9">4.1</div>
+        <div class="box" id="caja10">4.2</div>
+        <div class="box" id="caja11">4.3</div>
+    </div>
+
+ <script>
+     function toggleSidebar() {
+         let sidebar = document.getElementById("mySidebar");
+         sidebar.style.display = (sidebar.style.display === "block") ? "none" : "block";
+     }
+
+     function toggleSubmenu() {
+         let submenu = document.getElementById("submenuVentas");
+         submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+     }
+ </script>
+
+        
+</body>
+</html>
