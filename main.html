@@ -4,10 +4,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Inicio</title>
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;font-family: Arial, sans-serif;}
+        body {background-color: #f4f4f4;}
+        header * {text-align: center;}
+        .sidebar {position: fixed;top: 0;left: 0;height: 100vh;width: 160px;background: #222;padding-top: 40px;display: none;}
+        .sidebar a {padding: 10px;text-decoration: none;font-size: 14px;color: white;display: block;transition: 0.3s;}
+        .sidebar a:hover {background: #444;}
+        .toggle-btn {position: absolute;top: 10px;left: 10px;font-size: 14px;background: #222;color: white;border: none;padding: 5px 8px;cursor: pointer;border-radius: 4px;transition: 0.3s;}
+        .toggle-btn:hover {background: #444;}
+        .submenu {display: none;background: #333;}
+        .submenu a {padding-left: 20px;font-size: 13px;}
+        .container {margin-top: 50px;display: flex;flex-wrap: wrap;gap: 10px;width: 70%;margin-left: 15%;height: 100vh;}
+        .box {flex: 1 1 calc(33.33% - 10px);height: 20%;display: flex;align-items: center;justify-content: center;border: 1px solid #000;text-align: center;padding: 5px;}
+        .box:nth-child(1) {flex: 1 1 calc(66.66% - 10px);height: 40%;}
+        .box:nth-child(2), .box:nth-child(7), .box:nth-child(8), .box:nth-child(6) {height: 40%;}
+        [id^="caja"] {background-size: cover;background-position: center;}
+        #caja1 { background-image: url("imagenes/barbero.avif"); }
+        #caja3 { background-image: url("imagenes/barbero2.jpeg"); }
+        #caja4 { background-image: url("imagenes/barbero2.jpg"); }
+        #caja5 { background-image: url("imagenes/barbero3.jpg"); }
+        #caja9 { background-image: url("imagenes/peluqueria1.webp"); }
+        #caja10 { background-image: url("imagenes/peluqueria2.webp"); }
+        #caja11 { background-image: url("imagenes/peluqueria3.webp"); }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Peluqueria nombre</h1>
+        <h1 style="font-size: 50px;">Peluqueria nombre</h1>
     </header>
     <nav>
         <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
@@ -19,52 +43,36 @@
 
             <a href="javascript:void(0)" onclick="toggleSubmenu()">Compras ▼</a>
             <div id="submenuVentas" class="submenu">
-                <a href="comprar.html">Comprar</a> <!--Añadir que opciones a compra hay-->
-                <a href="consultar.html">Reservar</a> <!--Aparecer las reservas que tiene el usuario y opcion a reservar otra-->
-                <a href="anular.html">Anular</a><!--Anular una de las reservas que tiene el usuario-->
+                <a href="comprar.html">Comprar</a> 
+                <a href="consultar.html">Reservar</a> 
+                <a href="anular.html">Anular</a>
             </div>
 
             <a href="services.html">Servicios</a>
             <a href="contact.html">Contacto</a>
+            <a href="IniciarSesion.html">Iniciar sesión</a>
+            <a href="registrarse.html">Registrarse</a>
         </div>
     </nav>
-    <!--<div class="contenedor" id="contenedor">
-        <div id="box1">
-            <p>La barbería en Pamplona está otra vez de moda aunque para mí es mucho más que un trabajo o un negocio, es mi vida, mi pasión, un sentimiento, un arte, que como tal o se tiene o no se tiene. Y eso se refleja en el trabajo diario, que busca siempre la perfección y la satisfacción del cliente. Mi nombre es Javier Ugarte, aunque me conocen en el mundo de la peluquería como Javi “Tximak”. Desde niño quise ser peluquero: siempre me recuerdo imaginándome como tal, por eso me trasladé a Pamplona para estudiar peluquería en la Academia y el Instituto, dedicándome especialmente a la peluquería masculina.
-                Esa decisión, fue el germen de Tximak Barbershop, que hoy es la barbería en Pamplona de referencia, especialmente entre gente joven, los deportistas navarros (desde hace un tiempo son asiduos clientes, por eso de un tiempo a esta parte, se la reconoce también como “la peluquería de Osasuna”, porque no es difícil ver en ella como clientes habituales, a muchos jugadores rojillos…).</p>
-        </div>
-        <div id="box2"></div>
-        <div id="box3"></div>
-    </div>-->
+    
     <div class="container">
-        <!-- Fila 1 -->
         <div class="box" id="caja1"></div>
-        <div class="box" id="caja2"><p>La barbería en Pamplona está otra vez de moda aunque para mí es mucho más que un trabajo o un negocio, es mi vida, mi pasión, un sentimiento, un arte, que como tal o se tiene o no se tiene. Y eso se refleja en el trabajo diario, que busca siempre la perfección y la satisfacción del cliente. Mi nombre es Javier Ugarte, aunque me conocen en el mundo de la peluquería como Javi “Tximak”. </p></div>
-        <!-- Fila 2 FOTOS-->
+        <div class="box" id="caja2"><p style="font-size: 23px;">La barbería en Pamplona está otra vez de moda aunque para mí es mucho más que un trabajo o un negocio, es mi vida, mi pasión, un sentimiento, un arte, que como tal o se tiene o no se tiene. Y eso se refleja en el trabajo diario, que busca siempre la perfección y la satisfacción del cliente. Mi nombre es Javier Ugarte, aunque me conocen en el mundo de la peluquería como Javi “Tximak”. </p></div>
         <div class="box" id="caja3"></div>
         <div class="box" id="caja4"></div>
         <div class="box" id="caja5"></div>
-        <!-- Fila 3 -->
-        <div class="box" id="caja6">3.1</div>
-        <div class="box" id="caja7">3.2</div>
-        <div class="box" id="caja8">3.3</div>
-        <!-- Fila 4 -->
+        <div class="box" id="caja6"><p style="font-size: 23px;">Desde joven supe que quería ser peluquero. A finales de los 90, me mudé a Pamplona para estudiar peluquería y pronto destaqué en el ámbito masculino, que me apasionaba. En mis primeros trabajos, me gané rápidamente a la clientela masculina, sin dejar de hacer un buen trabajo con la femenina. En 2001, acepté una oferta en una peluquería de hombres, y creo que tomé la decisión correcta.</p></div>
+        <div class="box" id="caja7"><p style="font-size: 23px;">Trabajar en peluquería y barbería masculina requiere aprendizaje continuo. Viajo por España para formarme con profesionales, asistir a cursos, y colaborar como embajador de la marca Lakmé, participando en shows y cursos en diversas ciudades. Además, aprovechamos las nuevas tecnologías y plataformas online para mantenernos al día y compartir conocimientos con todo el equipo.</p></div>
+        <div class="box" id="caja8"><p style="font-size: 23px;">En Tximak no estoy solo; cuento con grandes colaboradores. Miren Ripodas es nuestra “barber” y experta en maquillaje, diseño de moda y arte, lo que refleja en cada corte. Odei, el más joven del equipo, aporta calma y precisión a su trabajo, y su pasión por la barbería es tan grande como su afición al tuning y detailing de coches.</p></div>
         <div class="box" id="caja9">4.1</div>
         <div class="box" id="caja10">4.2</div>
         <div class="box" id="caja11">4.3</div>
     </div>
 
  <script>
-     function toggleSidebar() {
-         let sidebar = document.getElementById("mySidebar");
-         sidebar.style.display = (sidebar.style.display === "block") ? "none" : "block";
-     }
-
-     function toggleSubmenu() {
-         let submenu = document.getElementById("submenuVentas");
-         submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
-     }
- </script>
+    function toggleSidebar() {let sidebar = document.getElementById("mySidebar");sidebar.style.display = (sidebar.style.display === "block") ? "none" : "block";}
+    function toggleSubmenu() {let submenu = document.getElementById("submenuVentas");submenu.style.display = (submenu.style.display === "block") ? "none" : "block";}
+</script>
 
         
 </body>
