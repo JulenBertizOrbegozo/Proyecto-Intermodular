@@ -1,86 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de Usuario</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #dff9fb, #c7ecee);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      width: 90%;
-      max-width: 500px;
-    }
-
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 10px;
-    }
-
-    hr {
-      margin: 20px 0;
-      border: none;
-      border-top: 2px solid #eee;
-    }
-
-    h3 {
-      margin-bottom: 30px;
-      color: #34495e;
-    }
-
-    .botones {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .botones button {
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      background-color: #3498db;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .botones button:hover {
-      background-color: #2980b9;
-    }
-
-    @media (min-width: 500px) {
-      .botones {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Hola ${nombre}</h1>
+    <h1>Hola ${nombre}, ¿Que quieres hacer?</h1>
     <hr>
-    <h3>¿Qué quieres hacer?</h3>
-    <div class="botones">
-      <button>Comprar</button>
-      <button>Reservar / Anular reserva</button>
-      <button>Consultar compras</button>
-    </div>
-  </div>
+    <button>Comprar</button>
+    <button><a href="Reservar.html">Reservar</a></button>
+    <button>Anular reserva</button>
 </body>
 </html>
